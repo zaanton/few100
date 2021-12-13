@@ -65,6 +65,9 @@ describe('basic data types', () => {
         book.title = 'War and Peace';
       });
 
+      //Tomorrow is DEATH MATCH AAAAAAA
+      //DON'T STAY UP PLAYING FFXIV TONIGHT (Jeff is amazing)
+
 
     });
   });
