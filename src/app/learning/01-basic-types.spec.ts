@@ -9,6 +9,62 @@ describe('basic data types', () => {
 
   describe('declaring variables', () => {
     it('untyped variables', () => {
+      let a;
+
+      a = 19;
+
+      expect(a).toBe(19);
+
+      a = 'tacos';
+      expect(a).toBe('tacos');
+
+      a = function (x: number) {
+        return x * 2;
+      }
+
+      expect(typeof (a)).toBe('function');
+
+      expect(a(10)).toBe(20);
+
+      it('setting data types for a variable', () => {
+        let x: number | string; //union type
+        x = 12;
+
+        x = 'tacos';
+      });
+
+      it('initializing a variable', () => {
+        let x: number | string = 12;
+        let y = 18;
+
+        x = 'Tacos';
+
+      });
+
+      it('declaring constants', () => {
+        const x = 12; //you cannot reassign a new value to this name.
+
+        //x = 13;
+
+        const jobs = ['Dev', 'QA', 'STE'];
+
+        //jobs = ['Fry Cook'];
+
+        jobs[0] = 'Fry Cook';
+
+        //jobs = [...jobs, 'Scrum Master']
+
+        jobs.push('Scrum Master');
+
+        expect(jobs).toEqual(['Fry Cook', 'QA', 'STE', 'Scrum Master']);
+
+        //It's not a real constant lol...
+
+        const book = { title: 'War and Piece', author: 'Tolstoy' };
+
+        book.title = 'War and Peace';
+      });
+
 
     });
   });
